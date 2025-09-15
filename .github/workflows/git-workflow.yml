@@ -1,0 +1,14 @@
+name: Test
+on:
+  pull_request:
+    branches: [master]
+jobs:
+  deploy:
+    runs-on: xsmall
+    timeout-minutes: 10
+    
+  steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
